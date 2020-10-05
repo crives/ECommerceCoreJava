@@ -24,7 +24,9 @@ public class ECommerce_Controller {
 	}
 
 	public void createAccount(String email, String password) {
-		new Customer(email, password);
+		Customer newAccount = new Customer(email, password);
+		
+		accounts.add(newAccount);
 	}
 	
 	

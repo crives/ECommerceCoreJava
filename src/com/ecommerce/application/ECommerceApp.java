@@ -57,6 +57,7 @@ public class ECommerceApp {
 		System.out.println("Enter your password:");
 		String password = sc.nextLine();
 		
+		// add it to in-storage memory
 		controller.createAccount(email, password);
 	}
 	
