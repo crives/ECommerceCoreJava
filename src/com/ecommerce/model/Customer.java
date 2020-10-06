@@ -16,6 +16,7 @@ public class Customer {
 	}
 	
 	public Customer(String email, String password) {
+		super();
 		this.email = email;
 		this.password = password;
 	}
@@ -52,11 +53,12 @@ public class Customer {
 		this.password = password;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Customer [customer_id=" + customer_id + ", name=" + name + ", email=" + email + ", password=" + password
 				+ "]";
 	}
-
+	
+	
+	
 }

@@ -3,9 +3,11 @@ package com.ecommerce.application;
 import java.util.Scanner;
 
 import com.ecommerce.controller.ECommerce_Controller;
-import com.ecommerce.model.Product;
+import com.ecommerce.model.Customer;
 
 public class ECommerceApp {
+		
+	private static Customer currentCustomer = null;
 	
 	private static Scanner sc = new Scanner(System.in);
 	
@@ -51,6 +53,9 @@ public class ECommerceApp {
 	
 	public static void createAccount() {
 		
+		System.out.println("Enter your name:");
+		String name = sc.nextLine();
+		
 		System.out.println("Enter your email:");
 		String email = sc.nextLine();
 		
@@ -66,17 +71,15 @@ public class ECommerceApp {
 		System.out.println("Enter email:");
 		String email = sc.nextLine();
 		
-		
 		System.out.println("Enter password:");
 		String password = sc.nextLine();
-		
+				
 		int index = ECommerce_Controller.canLogin(email, password);
 		while (index != -1) {
-			
-			
+			showItems();
 		}
 		
-			
+		currentCustomer = new Customer(email, password);
 			
 		
 	}
@@ -115,8 +118,13 @@ public class ECommerceApp {
 	
 	
 	public static void buyItem(String item_code) {
+		
 		System.out.println("Standalone Ecommerce App Invoice");
 		System.out.println("+===============================+");
+		System.out.println("| Customer Name: " + currentCustomer.getName() + " Date:"  );
+		
+		// Invoice Number need to fill out
+		System.out.println("| Invoice No:" );
 		
 	}
 	

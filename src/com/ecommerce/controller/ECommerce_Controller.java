@@ -26,7 +26,6 @@ public class ECommerce_Controller {
 		
 		accounts.add(newAccount);
 		
-		
 	}
 	
 	public static int canLogin(String email, String password) {
