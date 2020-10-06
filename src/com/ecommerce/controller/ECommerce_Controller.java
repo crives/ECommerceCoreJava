@@ -11,7 +11,7 @@ import com.ecommerce.model.Customer;
 
 public class ECommerce_Controller {
 	
-	List<Customer> accounts = new ArrayList<>();
+	static List<Customer> accounts = new ArrayList<>();
 	
 	public ECommerce_Controller( ) {
 		
@@ -27,8 +27,34 @@ public class ECommerce_Controller {
 		Customer newAccount = new Customer(email, password);
 		
 		accounts.add(newAccount);
+		
+		
 	}
 	
+	public static void canLogin(String email, String password) {
+	
+	
+		int index = 0;
+		for (Customer account : accounts) {
+			if (account.getEmail().equals(email)) {
+				if (account.getPassword().equals(password)) {
+
+					System.out.println("You are successfully logged in!");
+					showItems();
+				}
+				System.out.println("Wrong Password!");
+			}
+			index++;
+		}
+		System.out.println("Not registered");
+		
+	}
+	
+	
+	public static void showItems() {
+		
+		
+	}
 	
 	
 }

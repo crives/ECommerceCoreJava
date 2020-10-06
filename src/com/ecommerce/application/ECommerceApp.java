@@ -5,8 +5,8 @@ import java.util.Scanner;
 import com.ecommerce.controller.ECommerce_Controller;
 
 public class ECommerceApp {
-
-	static Scanner sc = new Scanner(System.in);
+	
+	private static Scanner sc = new Scanner(System.in);
 	
 	static ECommerce_Controller controller = new ECommerce_Controller();
 	
@@ -63,8 +63,23 @@ public class ECommerceApp {
 	
 	public static void login() {
 		
+		System.out.println("Enter email:");
+		String email = sc.nextLine();
+		
+		
+		System.out.println("Enter password:");
+		String password = sc.nextLine();
+		
+		
+		ECommerce_Controller.canLogin(email, password);
+		
+		
+		
+			
+			
 		
 	}
+	
 	
 	public static void buyItem() {
 		
