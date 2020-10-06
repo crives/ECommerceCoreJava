@@ -3,6 +3,7 @@ package com.ecommerce.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ecommerce.application.ECommerceApp;
 import com.ecommerce.model.Customer;
 
 //import java.util.List;
@@ -31,8 +32,7 @@ public class ECommerce_Controller {
 		
 	}
 	
-	public static void canLogin(String email, String password) {
-	
+	public static int canLogin(String email, String password) {
 	
 		int index = 0;
 		for (Customer account : accounts) {
@@ -40,21 +40,17 @@ public class ECommerce_Controller {
 				if (account.getPassword().equals(password)) {
 
 					System.out.println("You are successfully logged in!");
-					showItems();
+					ECommerceApp.showItems();
 				}
 				System.out.println("Wrong Password!");
 			}
 			index++;
 		}
 		System.out.println("Not registered");
-		
+		return index = -1;
 	}
 	
 	
-	public static void showItems() {
-		
-		
-	}
-	
+
 	
 }

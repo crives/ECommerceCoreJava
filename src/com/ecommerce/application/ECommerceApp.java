@@ -70,13 +70,30 @@ public class ECommerceApp {
 		System.out.println("Enter password:");
 		String password = sc.nextLine();
 		
-		
-		ECommerce_Controller.canLogin(email, password);
-		
-		
+		int index = ECommerce_Controller.canLogin(email, password);
+		while (index != -1) {
+			
+			
+		}
 		
 			
 			
+		
+	}
+	
+	public static void showItems() {
+		
+		System.out.println("		Standalone Ecommerce App");
+		System.out.println("+=====================================+");
+		System.out.println("| 	Items  		ItemCode  		Price |");
+		System.out.println("|                                     |");
+		System.out.println("| 1. Jacket		  Ja1			 $20  |");
+		System.out.println("| 2. Jeans        Je1            $10  |");
+		System.out.println("| 3. Shirt        Sh1            $5   |");
+		System.out.println("|        							  |");
+		System.out.println("| 4. Exit                             |");
+		System.out.println("+=====================================+");
+		
 		
 	}
 	
