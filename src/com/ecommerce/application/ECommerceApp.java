@@ -22,14 +22,13 @@ public class ECommerceApp {
 		System.out.println("| 1. Register           |");
 		System.out.println("| 2. Login              |");
 		System.out.println("| 3. Buy an Item        |");
-		System.out.println("| 4. Replace an Item    |");
+		System.out.println("| 4. Return an Item     |");
 		System.out.println("| 5. Exit               |");
 		System.out.println("+=======================+");
 		
 		choice = sc.nextInt();
 		
 		switch(choice) {
-		
 		case 1: 
 			createAccount();
 			break;
@@ -40,7 +39,7 @@ public class ECommerceApp {
 			showItems();
 			break;
 		case 4:
-			replaceItem();
+			returnItem();
 			break;
 		case 5: 
 			exit = true;
@@ -95,7 +94,7 @@ public class ECommerceApp {
 		System.out.println("| 4. Exit                             |");
 		System.out.println("+=====================================+");
 		System.out.println("");
-		System.out.println(" Which item would you like to buy?");
+		System.out.println(" Which item would you like to send payment for?");
 
 		int choice = sc.nextInt();
 		
@@ -109,18 +108,19 @@ public class ECommerceApp {
 		case 3:
 			buyItem("Sh1");
 			break;
-		
-		
+		case 4:
+			break;
 		}
 	}
 	
 	
 	public static void buyItem(String item_code) {
-		
+		System.out.println("Standalone Ecommerce App Invoice");
+		System.out.println("+===============================+");
 		
 	}
 	
-	public static void replaceItem() {
+	public static void returnItem() {
 		
 		
 	}
