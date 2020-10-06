@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 import com.ecommerce.controller.ECommerce_Controller;
 import com.ecommerce.model.Customer;
+import com.ecommerce.model.InvoiceProduct;
 
 public class ECommerceApp {
 		
 	private static Customer currentCustomer = null;
+	private static InvoiceProduct invoiceProduct = null;
 	
 	private static Scanner sc = new Scanner(System.in);
 	
@@ -119,13 +121,19 @@ public class ECommerceApp {
 	
 	public static void buyItem(String item_code) {
 		
+		
+		
+		
 		System.out.println("Standalone Ecommerce App Invoice");
 		System.out.println("+===============================+");
 		System.out.println("| Customer Name: " + currentCustomer.getName() + " Date:"  );
 		
 		// Invoice Number need to fill out
 		System.out.println("| Invoice No:" );
+		System.out.println("| Items    ItemCode      Price  |");
 		
+		
+		System.out.println("| 1.");
 	}
 	
 	public static void returnItem() {
