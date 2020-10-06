@@ -3,6 +3,7 @@ package com.ecommerce.application;
 import java.util.Scanner;
 
 import com.ecommerce.controller.ECommerce_Controller;
+import com.ecommerce.model.Product;
 
 public class ECommerceApp {
 	
@@ -36,7 +37,7 @@ public class ECommerceApp {
 			login();
 			break;
 		case 3: 
-			buyItem();
+			showItems();
 			break;
 		case 4:
 			replaceItem();
@@ -93,12 +94,28 @@ public class ECommerceApp {
 		System.out.println("|        							  |");
 		System.out.println("| 4. Exit                             |");
 		System.out.println("+=====================================+");
+		System.out.println("");
+		System.out.println(" Which item would you like to buy?");
+
+		int choice = sc.nextInt();
+		
+		switch (choice) {
+		case 1:
+			buyItem("Ja1");
+			break;
+		case 2:
+			buyItem("Je1");
+			break;
+		case 3:
+			buyItem("Sh1");
+			break;
 		
 		
+		}
 	}
 	
 	
-	public static void buyItem() {
+	public static void buyItem(String item_code) {
 		
 		
 	}

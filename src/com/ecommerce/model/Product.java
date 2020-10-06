@@ -2,22 +2,22 @@ package com.ecommerce.model;
 
 public class Product {
 
-	public int item_code;
+	public String item_code;
 	public String item;
 	public int price;
 	
-	public Product(int item_code, String item, int price) {
+	public Product(String item_code, String item, int price) {
 		super();
 		this.item_code = item_code;
 		this.item = item;
 		this.price = price;
 	}
 
-	public int getItem_code() {
+	public String getItem_code() {
 		return item_code;
 	}
 
-	public void setItem_code(int item_code) {
+	public void setItem_code(String item_code) {
 		this.item_code = item_code;
 	}
 

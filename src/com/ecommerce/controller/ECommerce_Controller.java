@@ -6,9 +6,6 @@ import java.util.List;
 import com.ecommerce.application.ECommerceApp;
 import com.ecommerce.model.Customer;
 
-//import java.util.List;
-
-//import com.ecommerce.model.Customer;
 
 public class ECommerce_Controller {
 	
